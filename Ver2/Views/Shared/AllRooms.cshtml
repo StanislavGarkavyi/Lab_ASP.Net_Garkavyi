@@ -1,0 +1,8 @@
+﻿@model Ver2.Data.Models.Room
+<div class="col-lg-4">
+    <img class="img-thumbnail" src="@Model.img" alt="@Model.name" />
+    <h2>@Model.name</h2>
+    <p>@Model.shortDesc</p>
+    <p>Ціна: @Model.price.ToString("c")</p>
+    <p><a class="btn btn-warning" asp-controller="ShopCart" aspaction="AddToCart" asp-route-id="@Model.id">Додати до корзини</a></p>
+</div>

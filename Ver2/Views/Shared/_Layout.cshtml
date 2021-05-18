@@ -1,0 +1,60 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet"
+          type="text/css" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bgdark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Автомобілі</a>
+                <button class="navbar-toggler" type="button" data-bstoggle="collapse" data-bs-target="#navbarCollapse" ariacontrols="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/">Головна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Cars/List">Всі автомобілі</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="/Cars/List/electro">Електромобілі</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Cars/List/fluel">
+                                Класичні
+                                автомобілі
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ShopCart/">Кошик</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search"
+                               placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success"
+                                type="submit">
+                            Пошук
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer class="container mt-5">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>© 2021 Всі права захищені· <a href="#">Угода</a></p>
+    </footer>
+    <script src="~/js/bootstrap.min.js"></script>
+</body>
+</html>

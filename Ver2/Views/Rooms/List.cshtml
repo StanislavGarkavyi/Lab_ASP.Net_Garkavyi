@@ -1,0 +1,15 @@
+﻿@model Ver2.ViewModels.RoomListViewModel
+@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h1>Всі номери</h1>
+<h3>@Model.currCategory</h3>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Ver2.Data.Models.Room room in Model.allRooms)
+        {
+            @Html.Partial("AllCars", room)
+        }
+    }
+</div>
